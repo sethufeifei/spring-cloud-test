@@ -1,0 +1,16 @@
+server:
+  port: 7904
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: microservice-consumer-movie
+logging:
+  level:
+    com.xust.cloud.microservicesimpleconsumermovie.feign.UserFeignClient: DEBUG
